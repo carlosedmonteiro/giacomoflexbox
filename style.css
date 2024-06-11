@@ -1,0 +1,106 @@
+/* Define estilos para todos os elementos HTML */
+* {
+    padding: 0px; /* Define o preenchimento interno de todos os elementos como 0 */
+    margin: 0px; /* Define as margens de todos os elementos como 0 */
+    box-sizing: border-box; /* Faz com que o padding e a borda não aumentem o tamanho total do elemento */
+    font-family: Arial; /* Define a família de fontes para todos os elementos */
+}
+
+/* Define variáveis de CSS */
+:root {
+    --corprimaria: rgb(255, 255, 255); /* Define a cor primária como branco */
+}
+
+/* Estilos para o elemento 'header' */
+header {
+    padding: 10px; /* Adiciona preenchimento interno de 10px */
+    background-color: rgb(0, 0, 0); /* Define o fundo como preto */
+    justify-content: space-between; /* Alinha os itens no header ao redor */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    display: flex; /* Define o display como flexível para permitir o posicionamento flexível dos itens */
+}
+
+/* Estilos para elementos 'ul', 'li' e 'a' dentro do header */
+header ul, li, a {
+    display: flex; /* Define a exibição como flexível para alinhar os itens horizontalmente */
+    gap: 20px; /* Define o espaçamento entre os elementos dentro do header */
+    text-decoration: none; /* Remove a decoração de texto dos links */
+}
+
+/* Estilos específicos para a classe 'logo' dentro do header */
+header .logo {
+    font-size: 26px; /* Define o tamanho da fonte do logotipo */
+    color: var(--corprimaria); /* Usa a cor primária definida anteriormente */
+    font-weight: bold; /* Define a espessura da fonte como negrito */
+}
+
+/* Estilos para todos os links dentro do header */
+header a {
+    color: rgb(255, 255, 255); /* Define a cor dos links como branco */
+    transition: color 0.5s; /* Adiciona uma transição suave de cor ao passar o mouse */
+    font-size: 15px; /* Define o tamanho da fonte para os links */
+}
+
+/* Estilos para os links no header quando estão em estado de hover */
+header a:hover {
+    color: var(--corprimaria); /* Altera a cor para a cor primária quando o mouse está sobre os links */
+}
+
+/* Estilos para cabeçalhos de nível 3 */
+h3 {
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 24px; /* Define o tamanho da fonte */
+    padding: 20px; /* Adiciona preenchimento interno de 20px */
+}
+
+/* Estilos para o elemento 'article' */
+article {
+    padding: 20px; /* Adiciona preenchimento interno de 20px */
+    flex-grow: 1; /* Permite que o elemento cresça dentro de seu contêiner flexível */
+    width: 270px; /* Define a largura do elemento */
+    max-width: 600px; /* Define a largura máxima do elemento */
+}
+
+/* Estilos para o elemento 'section' */
+section {
+    display: flex; /* Define o display como flexível para permitir o posicionamento flexível dos itens */
+    padding: 20px; /* Adiciona preenchimento interno de 20px */
+    flex-wrap: wrap; /* Permite que os itens flexíveis sejam distribuídos em várias linhas conforme necessário */
+    justify-content: flex-start; /* Alinha os itens flexíveis ao início do contêiner flexível */
+    width: 80%; /* Define a largura do elemento como 80% do contêiner pai */
+    margin: 0 auto; /* Centraliza horizontalmente o elemento */
+}
+
+/* Estilos para imagens */
+img {
+    width: 100%; /* Define a largura da imagem como 100% do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 600px; /* Define a largura máxima da imagem */
+}
+
+/* Pra mexer na "Descrição" */
+p {
+    color: rgb(0, 0, 0); /* Define a cor do texto como preto */
+    font-weight: bold; /* Define a espessura da fonte como negrito */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilos aplicados quando a largura da tela é menor ou igual a 600px */
+@media (max-width: 600px) {
+    header .logo {
+        font-size: 42px; /* Aumenta o tamanho da fonte do logotipo para telas menores */
+    }
+
+    header ul, li, a {
+        display: block; /* Altera a exibição para blocos para os itens do header */
+        font-size: 36px; /* Aumenta o tamanho da fonte para os itens do header */
+    }
+
+    article {
+        max-width: 100%; /* Define a largura máxima do artigo como 100% */
+    }
+
+    section {
+        width: 90%; /* Define a largura da seção como 90% */
+    }
+}
